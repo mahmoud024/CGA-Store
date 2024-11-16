@@ -1,0 +1,109 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+:root {
+    --background-color: #121212;
+    --text-color-primary: #E0E0E0;
+    --text-color-secondary: #B0B0B0;
+    --accent-color-1: #FFD700;
+    --accent-color-2: #1E90FF;
+    --border-color: #2E2E2E;
+}
+
+
+body {
+    margin-bottom: 60px;
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+}
+
+.navbar-nav nav-item nav-link:hover {
+    color: #B2022F;
+}
+
+.nav-link i {
+    font-size: 20px; /* Adjust icon size */
+    margin: 0 10px; /* Add spacing between icons */
+    transition: color 0.3s;
+}
+
+    .nav-link i:hover {
+        color: #B2022F; /* Change color on hover */
+    }
+
+/* Container for Search Box */
+.search-box {
+    display: flex; /* Align the button inside the input field */
+    position: relative;
+    width: 250px; /* Adjust the width of the search box */
+}
+
+/* Search Input Styling */
+.search-input {
+    border: 1px solid #fff; /* White border */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text for contrast */
+    padding-left: 15px; /* Add some padding inside */
+    padding-right: 40px; /* Space for the search button */
+    border-radius: 30px; /* Rounded corners */
+    height: 35px; /* Adjust the height */
+    width: 100%; /* Make the input fill the container */
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for focus effect */
+}
+
+    /* Search Input Focus Effect */
+    .search-input:focus {
+        border-color: #D22B2B; /* Red border when focused */
+        outline: none; /* Remove default outline */
+        box-shadow: 0 0 5px rgba(178, 2, 47, 0.6); /* Subtle red glow when focused */
+    }
+
+/* Search Button Inside the Input */
+.search-btn {
+    background-color: transparent; /* Transparent button background */
+    border: none; /* Remove button border */
+    position: absolute;
+    right: 10px; /* Position the button inside on the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
+    color: #D22B2B; /* Red icon color */
+    font-size: 20px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+    /* Hover effect for the search button */
+    .search-btn:hover {
+        color: #9b0231; /* Darker red on hover */
+    }
+
+    /* Optional: Add a focus effect for the button */
+    .search-btn:focus {
+        outline: none; /* Remove outline on button focus */
+    }
+
+/* Corrected Navbar hover styles */
+.navbar-nav .nav-item .nav-link {
+    color: white; /* Red color on hover */
+    font-size:18px;
+    margin-right: 10px;
+}
+
+/* Corrected Navbar hover styles */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #D22B2B; /* Red color on hover */
+}
+
+

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CGA_Store</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CGA_Store.styles.css" asp-append-version="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" style="background-color: #141414;">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" 
+                   style="font-family: 'Anton', sans-serif; font-size: 36px; letter-spacing: 0.2em; color:#D22B2B; margin-right: 50px">
+                    CGA
+                </a>
+
+                <!-- Navbar Toggler for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links and Icons -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <!-- Left Menu -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-custom" asp-area="" asp-controller="Home" asp-action="Index">Market</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-custom" asp-area="" asp-controller="Home" asp-action="Privacy">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-item-custom" asp-area="" asp-controller="Home" asp-action="Privacy">Deals</a>
+                        </li>
+                    </ul>
+
+
+
+                    <!-- Right Icons -->
+                    <div class="d-flex align-items-center">
+                        <!-- Search Box with Button Inside -->
+                        <form class="d-flex ms-3" role="search" action="/search" method="get">
+                            <div class="search-box">
+                                <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search" name="query">
+                                <button class="search-btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Loved Products Icon -->
+                        <a href="#" class="nav-link text-light">
+                            <i class="fas fa-heart"></i>
+                        </a>
+
+                        <!-- Market Icon -->
+                        <a href="#" class="nav-link text-light">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+
+                        <!-- User Profile Icon -->
+                        <a href="#" class="nav-link text-light">
+                            <img src="~/User_Image/user_image.png" alt="User Profile" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; border: 1px solid white;">
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - CGA Store - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
